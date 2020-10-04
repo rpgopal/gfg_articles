@@ -1,0 +1,14 @@
+Output:
+
+String from x is HELLO I AM A STRING PART OF SINGLETON CLASS
+String from y is HELLO I AM A STRING PART OF SINGLETON CLASS
+String from z is HELLO I AM A STRING PART OF SINGLETON CLASS
+
+
+String from x is hello i am a string part of singleton class
+String from y is hello i am a string part of singleton class
+String from z is hello i am a string part of singleton class
+
+Explanation: In the Singleton class, when we first time call Singleton() method, it creates an object of class Singleton with name single_instance and return
+it to the variable. Since single_instance is static, it is changed from null to some object. Next time if we try to call Singleton() method, since single_instance
+is not null, it is returned to the variable, instead of instantiating the Singleton class again.
