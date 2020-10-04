@@ -1,1 +1,27 @@
+Prerequisite – Merge Sort
 
+Merge sort involves recursively splitting the array into 2 parts, sorting and finally merging them. A variant of merge sort is called 3-way merge sort where instead
+of splitting the array into 2 parts we split it into 3 parts. Merge sort recursively breaks down the arrays to subarrays of size half. Similarly, 3-way Merge sort breaks down the arrays to subarrays of size one third.
+
+Examples:
+
+Input  : 45, -2, -45, 78, 30, -42, 10, 19 , 73, 93 
+Output : -45 -42 -2 10 19 30 45 73 78 93 
+
+Input  : 23, -19
+Output : -19  23
+
+Output:
+After 3 way merge sort: 
+-45 -42 -2 10 19 30 45 73 78 93 
+
+Here, we first copy the contents of data array to another array called fArray. Then, sort the array by finding midpoints that divide the array into 3 parts and
+called sort function on each array respectively. The base case of recursion is when size of array is 1 and it returns from the function. Then merging of arrays 
+starts and finally the sorted array will be in fArray which is copied back to gArray.
+
+Time Complexity: In case of 2-way Merge sort we get the equation: T(n) = 2T(n/2) + O(n)
+
+Similarly, in case of 3-way Merge sort we get the equation: T(n) = 3T(n/3) + O(n)
+By solving it using Master method, we get its complexity as O(n log 3n).. Although time complexity looks less compared to 2 way merge sort, the time taken
+actually may become higher because number of comparisons in merge function go higher. Please refer Why is Binary Search preferred over Ternary Search? for 
+details.
